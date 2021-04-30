@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 数组展开
+    var arr=[1,2,3,4]
+    let k=[...arr]
+    // 对象展开
+    let obj={
+      a:1,
+      b:2
+    }
+    let obj2={
+      ...obj,
+      c:3,
+      d:4
+    }
+
+    // 注意：这样赋值给obj3，前者是新建一个对象，修改obj3对obj无影响
+    // 而后者修改obj3会影响obj
+    // let obj3={...obj}
+    // let obj3=obj
+  </script>
+</body>
+</html>
