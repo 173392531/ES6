@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 用flat方法加括号内填数字代表解析的层级数
+        let arr=[
+            ['小明','18'],
+            ['小明','18'],
+            [
+                [
+                    [
+                        [
+                            [
+                                [
+                                    [
+                                        [
+                                            [
+                                                [
+                                                    [
+                                                        7,8,9
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+        console.log(arr.flat(Infinity))
+
+        // 如果想只找出第一项，flatMap只处理深度为1的情况
+        let arr1=[
+            ['小明','18'],
+            ['小k','28'],
+        ]
+        let newArr=arr1.flatMap((item)=>{
+            item=item.filter((item,index)=>{
+                return index==0
+            })
+            return item
+        })
+        console.log(newArr)
+    </script>
+</body>
+</html>
